@@ -1,0 +1,314 @@
+/* Windward Labs — the Slipway. Spec: docs/superpowers/specs/2026-07-25-labs-slipway-design.md */
+
+:root {
+  color-scheme: light dark;
+  --g: #f6f5f0;
+  --ink: #16213a;
+  --mut: #5a6478;
+  --line: #dcd9cf;
+  --blue: #2b59c9;
+  --blue-ink: #1e4098;
+  --cell: #fbfaf6;
+  --cell-hover: #ffffff;
+  --gold: #c9a25e;
+  --gold-ink: #8a6b39;
+  --lf-field: #202e4d;
+  --lf-square: #f6f5f0;
+  --lf-stroke: transparent;
+  --lf-sw: 0;
+  --hf-fill: #202e4d;
+  --hf-stroke: transparent;
+  --hf-sw: 0;
+  --hf-dot: #c9a25e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --g: #0f141e;
+    --ink: #e7e9ee;
+    --mut: #98a2b6;
+    --line: rgba(231, 233, 238, 0.14);
+    --blue: #8aa5f2;
+    --blue-ink: #a9bcf6;
+    --cell: rgba(255, 255, 255, 0.035);
+    --cell-hover: rgba(255, 255, 255, 0.07);
+    --gold: #c9a25e;
+    --gold-ink: #d9bd85;
+    --lf-field: transparent;
+    --lf-square: #e7e9ee;
+    --lf-stroke: #e7e9ee;
+    --lf-sw: 1.4;
+    --hf-fill: transparent;
+    --hf-stroke: #d9bd85;
+    --hf-sw: 1.6;
+    --hf-dot: #d9bd85;
+  }
+}
+
+/* The lamp: a stored choice outranks the OS preference */
+:root[data-theme="light"] {
+  --g: #f6f5f0;
+  --ink: #16213a;
+  --mut: #5a6478;
+  --line: #dcd9cf;
+  --blue: #2b59c9;
+  --blue-ink: #1e4098;
+  --cell: #fbfaf6;
+  --cell-hover: #ffffff;
+  --gold: #c9a25e;
+  --gold-ink: #8a6b39;
+  --lf-field: #202e4d;
+  --lf-square: #f6f5f0;
+  --lf-stroke: transparent;
+  --lf-sw: 0;
+  --hf-fill: #202e4d;
+  --hf-stroke: transparent;
+  --hf-sw: 0;
+  --hf-dot: #c9a25e;
+}
+:root[data-theme="dark"] {
+  --g: #0f141e;
+  --ink: #e7e9ee;
+  --mut: #98a2b6;
+  --line: rgba(231, 233, 238, 0.14);
+  --blue: #8aa5f2;
+  --blue-ink: #a9bcf6;
+  --cell: rgba(255, 255, 255, 0.035);
+  --cell-hover: rgba(255, 255, 255, 0.07);
+  --gold: #c9a25e;
+  --gold-ink: #d9bd85;
+  --lf-field: transparent;
+  --lf-square: #e7e9ee;
+  --lf-stroke: #e7e9ee;
+  --lf-sw: 1.4;
+  --hf-fill: transparent;
+  --hf-stroke: #d9bd85;
+  --hf-sw: 1.6;
+  --hf-dot: #d9bd85;
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url(fonts/InstrumentSans.woff2) format("woff2");
+}
+@font-face {
+  font-family: "EB Garamond";
+  font-style: normal;
+  font-weight: 400 800;
+  font-display: swap;
+  src: url(fonts/EBGaramond-Roman.woff2) format("woff2");
+}
+
+* { box-sizing: border-box; margin: 0; }
+
+body {
+  font-family: "Instrument Sans", Helvetica, Arial, sans-serif;
+  background: var(--g);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* flags */
+.lflag .f { fill: var(--lf-field); stroke: var(--lf-stroke); stroke-width: var(--lf-sw); }
+.lflag .s { fill: var(--lf-square); }
+.hflag .f { fill: var(--hf-fill); stroke: var(--hf-stroke); stroke-width: var(--hf-sw); }
+.hflag .d { fill: var(--hf-dot); }
+
+/* top bar */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--line);
+}
+.brand { display: flex; align-items: center; gap: 13px; }
+.brand-name {
+  font-family: "EB Garamond", Georgia, serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.top-right { display: flex; align-items: center; gap: 26px; flex-wrap: wrap; justify-content: flex-end; }
+.top-link {
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--mut);
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.top-link:hover { color: var(--blue-ink); }
+
+/* the lamp */
+.lamp { display: flex; align-items: center; gap: 2px; }
+.lamp-opt {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 8px 8px;
+  cursor: pointer;
+  font-family: "Instrument Sans", Helvetica, Arial, sans-serif;
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mut);
+}
+.lamp-opt::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border: 1px solid var(--gold-ink);
+  flex: none;
+}
+.lamp-opt:hover { color: var(--blue-ink); }
+.lamp-opt:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.lamp-opt[aria-pressed="true"] { color: var(--ink); }
+.lamp-opt[aria-pressed="true"]::before {
+  background: var(--gold);
+  border-color: var(--gold);
+  box-shadow: 0 0 5px rgba(201, 162, 94, 0.55);
+}
+
+/* hero */
+.hero { padding: 84px 0 64px; max-width: 640px; }
+.hero-h1 {
+  font-weight: 600;
+  font-size: clamp(32px, 5.4vw, 52px);
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+.hero-sub { margin-top: 22px; font-size: 17px; color: var(--mut); line-height: 1.55; }
+
+/* fleet grid */
+.fleet {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.cell {
+  display: block;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 26px 26px 30px;
+  background: var(--cell);
+  text-decoration: none;
+  color: inherit;
+}
+.cell:hover { background: var(--cell-hover); }
+.cell:hover .cell-name { color: var(--blue-ink); }
+.cell:focus-visible { outline: 2px solid var(--blue); outline-offset: -2px; }
+.cell-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.cell-status {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue-ink);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.cell-status::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); }
+.cell-name { display: block; margin-top: 14px; font-weight: 600; font-size: 21px; letter-spacing: -0.01em; }
+.cell-name .arr { color: var(--blue); margin-left: 5px; font-size: 16px; display: inline-block; }
+.cell-desc { display: block; margin-top: 9px; font-size: 14.5px; line-height: 1.55; color: var(--mut); max-width: 40ch; }
+.cell-domain { display: inline-block; margin-top: 14px; font-size: 12px; font-weight: 500; color: var(--blue-ink); }
+
+/* footer */
+.foot {
+  margin-top: 64px;
+  border-top: 1px solid var(--line);
+  padding: 26px 0 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 32px;
+  align-items: center;
+  justify-content: space-between;
+}
+.plate { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.plate-text {
+  font-family: "EB Garamond", Georgia, serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--mut);
+}
+.plate-diamond {
+  width: 5px;
+  height: 5px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  flex: none;
+}
+.plate-link {
+  font-family: "EB Garamond", Georgia, serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blue-ink);
+  text-decoration: none;
+}
+.plate-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.plate-link:focus-visible, .top-link:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.foot-copy { font-size: 11px; letter-spacing: 0.14em; color: var(--mut); text-transform: uppercase; }
+
+/* motion, only when welcome */
+@media (prefers-reduced-motion: no-preference) {
+  .cell { transition: background 0.15s ease; }
+  .cell-name, .lamp-opt, .top-link { transition: color 0.15s ease; }
+  .cell .arr { transition: transform 0.15s ease; }
+  .cell:hover .arr { transform: translate(2px, -2px); }
+  .lamp-opt::before { transition: background 0.15s ease, box-shadow 0.15s ease; }
+}
+
+/* small screens */
+@media (max-width: 780px) {
+  .top { flex-wrap: wrap; }
+  .fleet { grid-template-columns: 1fr; }
+  .hero { padding: 56px 0 44px; }
+}
+
+/* print: daylight, no chrome */
+@media print {
+  :root {
+    --g: #ffffff;
+    --ink: #16213a;
+    --mut: #5a6478;
+    --line: #dcd9cf;
+    --blue: #1e4098;
+    --blue-ink: #1e4098;
+    --cell: #ffffff;
+    --cell-hover: #ffffff;
+    --gold: #c9a25e;
+    --gold-ink: #8a6b39;
+    --lf-field: #202e4d;
+    --lf-square: #ffffff;
+    --lf-stroke: transparent;
+    --lf-sw: 0;
+    --hf-fill: #202e4d;
+    --hf-stroke: transparent;
+    --hf-sw: 0;
+    --hf-dot: #c9a25e;
+  }
+  .lamp, .arr { display: none; }
+}
