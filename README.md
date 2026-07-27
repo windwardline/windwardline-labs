@@ -8,7 +8,7 @@ service: [Pathfinder](https://pathfinder.windwardline.com),
 
 Static site, no build step: one HTML file, one stylesheet, self-hosted
 Instrument Sans and EB Garamond, the division signal flag as inline SVG, and
-the lamp (day shift / night shift / ship's time) for theme control. Design
+the lamp (light / dark / system) for theme control. Design
 spec: [docs/superpowers/specs/2026-07-25-labs-slipway-design.md](docs/superpowers/specs/2026-07-25-labs-slipway-design.md).
 
 Deployed on Vercel; DNS on Cloudflare. Pushes to `main` deploy to production.
