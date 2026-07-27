@@ -35,8 +35,8 @@
     --gold: #c9a25e;
     --gold-ink: #d9bd85;
     --lf-field: transparent;
-    --lf-square: #e7e9ee;
-    --lf-stroke: #e7e9ee;
+    --lf-square: #d9bd85;
+    --lf-stroke: #d9bd85;
     --lf-sw: 1.4;
     --hf-fill: transparent;
     --hf-stroke: #d9bd85;
@@ -78,8 +78,8 @@
   --gold: #c9a25e;
   --gold-ink: #d9bd85;
   --lf-field: transparent;
-  --lf-square: #e7e9ee;
-  --lf-stroke: #e7e9ee;
+  --lf-square: #d9bd85;
+  --lf-stroke: #d9bd85;
   --lf-sw: 1.4;
   --hf-fill: transparent;
   --hf-stroke: #d9bd85;
@@ -312,3 +312,9 @@ body {
   }
   .lamp, .arr { display: none; }
 }
+
+/* contact */
+.contact { max-width: 980px; margin: 40px auto 0; padding: 18px 30px 0; border-top: 1px solid var(--line); display: flex; align-items: baseline; gap: 24px; }
+.contact-label { font-size: 11px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mut); }
+.contact-link { font-size: 15px; color: var(--blue-ink); text-decoration: none; }
+.contact-link:hover { text-decoration: underline; text-underline-offset: 4px; }
