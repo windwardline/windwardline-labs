@@ -14,8 +14,8 @@
   --gold-ink: #8a6b39;
   --lf-field: #202e4d;
   --lf-square: #f6f5f0;
-  --lf-stroke: transparent;
-  --lf-sw: 0;
+  --lf-stroke: #202e4d;
+  --lf-sw: 1.4;
   --hf-fill: #202e4d;
   --hf-stroke: transparent;
   --hf-sw: 0;
@@ -34,8 +34,8 @@
     --cell-hover: rgba(255, 255, 255, 0.07);
     --gold: #c9a25e;
     --gold-ink: #d9bd85;
-    --lf-field: transparent;
-    --lf-square: #d9bd85;
+    --lf-field: #202e4d;
+    --lf-square: #f6f5f0;
     --lf-stroke: #d9bd85;
     --lf-sw: 1.4;
     --hf-fill: transparent;
@@ -59,8 +59,8 @@
   --gold-ink: #8a6b39;
   --lf-field: #202e4d;
   --lf-square: #f6f5f0;
-  --lf-stroke: transparent;
-  --lf-sw: 0;
+  --lf-stroke: #202e4d;
+  --lf-sw: 1.4;
   --hf-fill: #202e4d;
   --hf-stroke: transparent;
   --hf-sw: 0;
@@ -77,8 +77,8 @@
   --cell-hover: rgba(255, 255, 255, 0.07);
   --gold: #c9a25e;
   --gold-ink: #d9bd85;
-  --lf-field: transparent;
-  --lf-square: #d9bd85;
+  --lf-field: #202e4d;
+  --lf-square: #f6f5f0;
   --lf-stroke: #d9bd85;
   --lf-sw: 1.4;
   --hf-fill: transparent;
@@ -303,8 +303,8 @@ body {
     --gold-ink: #8a6b39;
     --lf-field: #202e4d;
     --lf-square: #ffffff;
-    --lf-stroke: transparent;
-    --lf-sw: 0;
+    --lf-stroke: #202e4d;
+    --lf-sw: 1.4;
     --hf-fill: #202e4d;
     --hf-stroke: transparent;
     --hf-sw: 0;
