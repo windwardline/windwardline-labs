@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Schedule — Windward Labs</title>
+<meta name="description" content="Book a commission call with Windward Labs, the software division of Windward Line.">
+<script src="script.js"></script>
+<link rel="preload" href="fonts/InstrumentSans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/EBGaramond-Roman.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="/">
+    <svg class="lflag" width="27" height="18" viewBox="0 0 30 20" role="img" aria-label="Windward Labs flag">
+      <rect class="f" x="0.7" y="0.7" width="28.6" height="18.6"/>
+      <rect class="s" x="10.5" y="5.5" width="9" height="9"/>
+    </svg>
+    <span class="brand-name">Windward Labs</span>
+  </a>
+  <div class="top-right">
+    <div class="lamp" role="group" aria-label="Lamp">
+      <button class="lamp-opt" type="button" data-set-theme="light" aria-pressed="false">Light</button>
+      <button class="lamp-opt" type="button" data-set-theme="dark" aria-pressed="false">Dark</button>
+      <button class="lamp-opt" type="button" data-set-theme="system" aria-pressed="true">System</button>
+    </div>
+    <a class="top-link" href="https://windwardline.com" target="_blank" rel="noopener">A division of Windward Line ↗</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-label="Schedule">
+    <h1 class="hero-h1">Book a commission call.</h1>
+    <p class="hero-sub">Thirty minutes to scope the work. If the calendar does not suit,
+    write to <a class="contact-link" href="mailto:labs@windwardline.com?subject=%5BWindward%20Labs%5D%20Contact">labs@windwardline.com</a>.</p>
+  </section>
+
+  <section class="sched" aria-label="Booking calendar">
+    <iframe class="sched-frame" src="https://koalendar.com/e/windward-labs?embed=true" title="Windward Labs booking calendar" loading="lazy"></iframe>
+  </section>
+</main>
+
+<footer class="foot">
+  <span class="plate">
+    <svg class="hflag" width="22" height="14" viewBox="0 0 34 21" aria-hidden="true">
+      <path class="f" d="M0 0 H34 L21.5 10.5 L34 21 H0 Z"/>
+      <circle class="d" cx="12" cy="10.5" r="4.6"/>
+    </svg>
+    <span class="plate-text">A division of Windward Line</span>
+    <span class="plate-diamond" aria-hidden="true"></span>
+    <span class="plate-text">Est. 2026</span>
+    <span class="plate-diamond" aria-hidden="true"></span>
+    <a class="plate-link" href="https://windwardline.com" target="_blank" rel="noopener">windwardline.com&nbsp;↗</a>
+  </span>
+  <span class="foot-copy">© 2026 Windward Line LLC · Virginia</span>
+</footer>
+
+</body>
+</html>
