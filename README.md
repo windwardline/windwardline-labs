@@ -12,9 +12,10 @@ The register stays current by standing rule: when new work goes live, its
 row joins this page, the portfolio follows, and both READMEs update in the
 same change.
 
-Static site, no build step: one HTML file, one stylesheet, self-hosted
-Instrument Sans and EB Garamond, the division signal flag as inline SVG, and
-the lamp (light / dark / system) for theme control. Design
+Static site, no build step: two HTML pages (the register and `/schedule`,
+which embeds the division's Koalendar booking page), one stylesheet,
+self-hosted Instrument Sans and EB Garamond, the division signal flag as
+inline SVG, and the lamp (light / dark / system) for theme control. Design
 spec: [docs/superpowers/specs/2026-07-25-labs-slipway-design.md](docs/superpowers/specs/2026-07-25-labs-slipway-design.md).
 
 Deployed on Vercel; DNS on Cloudflare. Pushes to `main` deploy to production.
