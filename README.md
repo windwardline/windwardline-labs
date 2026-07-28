@@ -1,10 +1,16 @@
 # labs.windwardline.com
 
-Windward Labs, the software division of Windward Line. Four products in
+Windward Labs, the software division of Windward Line. Six products in
 service: [Pathfinder](https://pathfinder.windwardline.com),
 [LevelFlow Cloud](https://levelflow.windwardline.com),
-[TimeShift](https://timeshift.windwardline.com), and
-[Mimic](https://mimic.windwardline.com).
+[TimeShift](https://timeshift.windwardline.com),
+[Mimic](https://mimic.windwardline.com),
+[That's Extra](https://thats-extra.windwardline.com), and
+[Proper Form](https://proper-form.windwardline.com).
+
+The register stays current by standing rule: when new work goes live, its
+row joins this page, the portfolio follows, and both READMEs update in the
+same change.
 
 Static site, no build step: one HTML file, one stylesheet, self-hosted
 Instrument Sans and EB Garamond, the division signal flag as inline SVG, and
