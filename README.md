@@ -8,6 +8,8 @@ service: [Pathfinder](https://pathfinder.windwardline.com),
 [That's Extra](https://thats-extra.windwardline.com), and
 [Proper Form](https://proper-form.windwardline.com).
 
+![The Labs register: six products in service, each cell flying its signal flag](docs/readme-hero.png)
+
 The register stays current by standing rule: when new work goes live, its
 row joins this page, the portfolio follows, and both READMEs update in the
 same change.
