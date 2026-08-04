@@ -12,5 +12,5 @@ reply within 72 hours. Please do not open public issues for security reports.
 
 ## Scope
 
-- This repository and the deployment at https://windwardline.com
-- Division products have their own repositories and policies.
+- This repository and the deployment at https://labs.windwardline.com
+- Other Windward Line products have their own repositories and policies.
