@@ -26,3 +26,4 @@ Then the portfolio repo and both repos' READMEs update in the same change (the s
 - Koalendar slug `windward-labs` is hardcoded in `schedule.html`; CSP `frame-src https://koalendar.com` in `vercel.json`; change both together.
 - Labs is the only division with the blue accent: `--blue #2b59c9` / `--blue-ink #1e4098` (dark `#8aa5f2` / `#a9bcf6`), alongside the shared `--gold`.
 - `cleanUrls: true` maps `/schedule` → `schedule.html`. `.vercelignore` excludes `docs/`.
+- `fonts/` is OFL 1.1 territory, carved out of the proprietary `LICENSE`. `fonts/OFL.txt` carries the copyright line for every family in the directory and the verbatim license; it ships with the fonts and is never deleted. Adding or replacing a font adds or replaces its copyright line, taken from the font's own `name` table, not from memory.

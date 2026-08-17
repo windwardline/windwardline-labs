@@ -22,3 +22,8 @@ spec: [docs/superpowers/specs/2026-07-25-labs-slipway-design.md](docs/superpower
 
 Deployed on Vercel; DNS on Cloudflare. Pushes to `main` deploy to production.
 Security headers are set in [vercel.json](vercel.json).
+
+The site is proprietary; see [LICENSE](LICENSE). The webfonts are not.
+EB Garamond and Instrument Sans ship under the SIL Open Font License 1.1.
+Their copyright notices and the license text are in
+[fonts/OFL.txt](fonts/OFL.txt).
