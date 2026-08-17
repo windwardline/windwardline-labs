@@ -12,8 +12,13 @@ portion of this repository without prior written permission from the
 copyright holder.
 
 Access to or visibility of this repository does not grant any license or
-waive any rights. Third-party materials, if any, remain subject to their
-respective licenses and notices.
+waive any rights. Third-party materials remain subject to their respective
+licenses and notices.
+
+The webfonts in fonts/ are third-party materials and are excluded from the
+notice above. EB Garamond and Instrument Sans are licensed under the SIL Open
+Font License, Version 1.1. Their copyright notices and the full license text
+are in fonts/OFL.txt, which travels with the fonts.
 
 THE MATERIALS ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS
