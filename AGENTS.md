@@ -29,3 +29,17 @@ Then the portfolio repo and both repos' READMEs update in the same change (the s
 - Labs is the only division with the blue accent: `--blue #2b59c9` / `--blue-ink #1e4098` (dark `#8aa5f2` / `#a9bcf6`), alongside the shared `--gold`.
 - `cleanUrls: true` maps `/schedule` → `schedule.html`. `.vercelignore` excludes `docs/`.
 - `fonts/` is OFL 1.1 territory, carved out of the proprietary `LICENSE`. `fonts/OFL.txt` carries the copyright line for every family in the directory and the verbatim license; it ships with the fonts and is never deleted. Adding or replacing a font adds or replaces its copyright line, taken from the font's own `name` table, not from memory.
+
+## Declared gates
+
+The machine-readable gate set. `scripts/fleet-conformance.sh` requires this block
+and the workspace done-gate hook runs every `gate:` line before a session may
+finish, so what runs is what is written here rather than what a hook guessed from
+`package.json`. Each key states its own boundary: `gate:` runs at session end and
+must be local and quick; `release:` runs before a pull request and may be slow;
+`cadence:` is scheduled or needs the live machine and is run by neither.
+
+```fleet-gates
+gate: npx --yes html-validate@9 index.html
+gate: node -e "JSON.parse(require('fs').readFileSync('vercel.json','utf8'))"
+```
