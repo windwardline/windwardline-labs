@@ -17,11 +17,11 @@ CI is `ci.yml` — html-validate on `index.html` plus the `vercel.json` parse, o
 A product launch or retirement moves four places here in the same change set, then two sibling repos:
 
 1. Grid cell in `index.html` (`<section class="fleet">`): `<a class="cell">` with the lflag SVG, `cell-status`, `cell-name` + ↗, `cell-desc`, `cell-domain`.
-2. Hero count in `index.html` — word-spelled ("Six products in service…").
+2. Hero count in `index.html` — word-spelled ("Five products in service…").
 3. Meta description in `index.html` — the count word and the full name list, Oxford comma.
 4. The `README.md` product list.
 
-Then the portfolio repo and both repos' READMEs update in the same change (the standing launch-registry rule). Current order: Pathfinder, Levelflow Cloud, TimeShift, Mimic, That's Extra, Proper Form.
+Then the portfolio repo and both repos' READMEs update in the same change (the standing launch-registry rule). Current order: Pathfinder, Levelflow Cloud, Mimic, That's Extra, Proper Form.
 
 ## Laws
 

@@ -1,14 +1,13 @@
 # labs.windwardline.com
 
-Windward Labs, the software division of Windward Line. Six products in
+Windward Labs, the software division of Windward Line. Five products in
 service: [Pathfinder](https://pathfinder.windwardline.com),
 [Levelflow Cloud](https://levelflow.windwardline.com),
-[TimeShift](https://timeshift.windwardline.com),
 [Mimic](https://mimic.windwardline.com),
 [That's Extra](https://thats-extra.windwardline.com), and
 [Proper Form](https://proper-form.windwardline.com).
 
-![The Labs register: six products in service, each cell flying its signal flag](docs/readme-hero.png)
+![The Labs register: five products in service, each cell flying its signal flag](docs/readme-hero.png)
 
 The register stays current by standing rule: when new work goes live, its
 row joins this page, the portfolio follows, and both READMEs update in the
